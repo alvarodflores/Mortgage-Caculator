@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <title>Mortgage Calculator</title>
+  </head>
+  <body>
+    <h1>Mortgage Calculator</h1>
+    <form class="mortgage-calc" action="{{url_for('second')}}" method="post">
+      <h3>Home Price:  <input type="number" name="home_price"></h3>
+      <h3>Down Payment:  <input type="number" name="down_payment"> %</h3>
+      <h3>Loan Term:  <input type="number" name="loan_term"> years</h3>
+      <button>Submit</button>
+    </form>
+
+  </body>
+</html>

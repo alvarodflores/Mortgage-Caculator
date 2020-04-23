@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <title>Mortgage Calculator</title>
+  </head>
+  <body>
+    <h1>Mortgage Calculator</h1>
+    <form class="mortgage-calc" action="{{url_for('second')}}" method="post">
+      <h3>Home Price:  <input type="number" name="home_price"></h3>
+      <h3>Down Payment:  <input type="number" name="down_payment"></h3>
+      <h3>Loan Term:  <input type="number" name="loan_term"> years</h3>
+      <button>Submit</button>
+    </form>
+    <h1>Monthly Pay: ${{monthly_pay}}</h1>
+    <table>
+      <tr>
+        <td><h1>Monthly</h1></td>
+        <td><h1>Yearly</h1></td>
+      </tr>
+      <tr>
+        <td><h3>Mortgage Payment:</h3><p> ${{monthly_pay}}</p></td>
+        <td><h3>Mortgage Payment:</h3><p> ${{mort_yearly}}</p></td>
+      </tr>
+
+    </table>
+    <h1>House Price:</h1><p> ${{house_price}}</p>
+    <h2>Loan Amount:</h2><p> ${{loan_amount}}</p>
+    <h2>Down Payment:</h2><p> ${{down_payment}}</p>
+    <h2>Total of {{months}} morgage payments</h2><p>${{total_paid}}</p>
+  </body>
+</html>
